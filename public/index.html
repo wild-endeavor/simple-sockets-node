@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="./public/javascripts/jquery.serializejson.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./public/javascripts/chat.js"></script>
+  <script src="./public/javascripts/chat_ui.js"></script>
+  <script src="./public/javascripts/chat_app.js"></script>
+</head>
+<body>
+  <h1>WELCOME TO CAT CHAT</h1>
+  <ul id='messages'>
+  </ul>
+  <form id='message-input'>
+    <label>Message
+      <input type="text" name="message[text]">
+    </label>
+    <input type="submit" value="Send">
+  </form><br>
+  <br>
+  <form id='username'>
+    <label>Username
+      <input type="text" name="user[nickname]">
+    </label>
+      <input type="submit" value="Change Username">
+  </form>
+</body>
+</html>
