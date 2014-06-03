@@ -3,6 +3,7 @@ var url = require('url');
 var route = require('./router').route;
 var requestHandlers = require('./request_handlers');
 var createChat = require('./lib/chat_server').createChat;
+var port = process.env.PORT || 8880;
 
 var handle = {};
 handle["/"] = requestHandlers.start;
@@ -19,9 +20,9 @@ var server = http.createServer(function (request, response) {
 
   // response.writeHead(200, {'Content-Type': 'text/plain'});
  //  response.end('I AM THE DEVIL');
-}).listen(6660);
+}).listen(port);
 
 createChat(server);
 
 
-console.log('Server running at http://localhost:6660');
+console.log("Server running at http://localhost:" + port);
