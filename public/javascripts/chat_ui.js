@@ -14,8 +14,17 @@
   };
 
   ChatUi.prototype.handleNicknameResponse = function(data) {
-    console.log(data);
-    $('#username').find("input").val(data.nickname);
+    $("#username-input").val(data.nickname);
+  };
+
+  ChatUi.prototype.memberListingRefresh = function(data) {
+    $ul = $("<ul>");
+    _(data.participants).each(function(val) {
+      $li = $("<li>");
+      $li.html(val);
+      $ul.append($li);
+    });
+    $("#participants").html($ul);
   };
 
   // Sends message to server

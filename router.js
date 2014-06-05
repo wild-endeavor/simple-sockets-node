@@ -15,7 +15,6 @@ function route(handleMatcher, pathname, response, request) {
         response.end("Error loading something.");
       }
       response.writeHead(200);
-      // response.write(data);
       response.end(data);
     });
   }

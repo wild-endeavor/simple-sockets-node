@@ -5,6 +5,7 @@ $(function() {
   chatObj.registerChannel('message', chatUiObj.handleIncomingMessage);
   chatObj.registerChannel('nicknameChangeResponse',
      chatUiObj.handleNicknameResponse);
+  chatObj.registerChannel('memberListing', chatUiObj.memberListingRefresh);
 
   // Make initial request to change nickname to something invalid.
   $('#username').submit(function (event) {
@@ -15,10 +16,10 @@ $(function() {
 
   chatUiObj.changeNickname("");
 
-  $('#message-input').submit(function (event) {
+  $("#message-input").submit(function (event) {
     event.preventDefault();
     var message = $(event.currentTarget).serializeJSON().message.text;
     chatUiObj.sendMessage(message);
-    $('#message-input').find("input").val("");
+    $("#message-entry").val("");
   });
 });
