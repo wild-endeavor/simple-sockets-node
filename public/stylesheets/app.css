@@ -1,0 +1,32 @@
+
+
+
+div.nav-bar-container {
+    margin-left: 35px;
+    background-color: rgba(252, 251, 254, 0.7);
+    background-image: none;
+}
+div.navbar-fixed-top {
+    background-color: rgba(252, 251, 254, 0.7);
+    background-image: none;
+}
+div.container {
+    margin-left: 45px;
+}
+
+div.header-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.navbar-fixed-top {
+    
+}
+
+body {
+  padding-top: 70px;
+}
+
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}

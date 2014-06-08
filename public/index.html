@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="./public/javascripts/jquery.serializejson.js"></script>
   <script src="./public/javascripts/underscore.js"></script>
@@ -8,29 +9,50 @@
   <script src="./public/javascripts/chat.js"></script>
   <script src="./public/javascripts/chat_ui.js"></script>
   <script src="./public/javascripts/chat_app.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./public/stylesheets/app.css">
 </head>
-<body>
-  <div id="main-content">
-    <h1>Welcome to Cat Chat</h1>
-    <h3>Meow? Meow</h3>
-    <ul id='messages'>
-    </ul>
-    <form id='message-input'>
-      <label>Message
-        <input type="text" name="message[text]" id="message-entry">
-      </label>
-      <input type="submit" value="Send">
-    </form><br>
-    <br>
-    <form id="username">
-      <label>Username
-        <input type="text" name="user[nickname]" id="username-input">
-      </label>
-        <input type="submit" value="Change Username">
-    </form>
-  </div>
-  <div id="participants">
 
+<body>
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container nav-bar-container">
+      <div class="navbar-header header-text">
+        <a class="navbar-brand" href="#">nodeling</a>
+      </div>
+      <form class="navbar-form navbar-right" id="username">
+        <label for="username-input">Username</label>
+        <input type="text" class="form-control" name="user[nickname]" id="username-input">
+      </form>
+
+    </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div id="main-content">
+          <form id='message-input'>
+            <label for="message-entry">Message</label>
+            <input type="text" name="message[text]" id="message-entry" placeholder="write your message...">
+            <input type="submit" value="Send">
+          </form><br>
+          <br>
+        </div>
+        <div id="participants">
+
+        </div>
+      </div> <!-- column -->
+      <div class="col-md-7">
+        <ul id='messages'>
+        </ul>
+      </div> <!-- column -->
+    </div> <!-- row -->
+  </div> <!-- container -->
 </body>
+
 </html>

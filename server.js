@@ -9,10 +9,6 @@ var handle = {};
 handle["/"] = requestHandlers.start;
 
 var server = http.createServer(function (request, response) {
-  // console.log("RESPONSE");
-  // console.log(response);
-  // console.log("REQUEST");
-  // console.log(request);
   var pathname = url.parse(request.url).pathname;
   route(handle, pathname, response, request);
 }).listen(port);

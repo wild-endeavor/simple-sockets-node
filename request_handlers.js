@@ -8,7 +8,7 @@ function start(response) {
 
   fs.readFile("./public/index.html", {encoding: "utf8"}, function(err, data) {
     if (err) {
-      console.log("fs error");
+      console.log("fs error index");
     }
     response.writeHead(200, {"Content-Type": "text/html" });
     response.write(data);
