@@ -16,3 +16,4 @@ var server = http.createServer(function (request, response) {
 createChat(server);
 
 console.log("Server running at http://localhost:" + port);
+
